@@ -34,14 +34,13 @@ var newsData = NewsData()
 var testData = VisitData()
 var degreesData = DegreesData()
 var teamData = TeamData()
-
 ```
 
 **4. Protocol Defination**
 
 A `protocol` defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality.
 
-- You can declare many protocols as you want in the .swift file. But make sure the functions and the properties that you declared inside the protocol is meaningful and associated with that `protocol`.
+- You can declare many `protocol`s as you want in the .swift file. But make sure the functions and the properties that you declared inside the protocol is meaningful and associated with that `protocol`.
 
 - Start `protocol` name with uppercased letter.
 
@@ -59,4 +58,14 @@ A `protocol` defines a blueprint of methods, properties, and other requirements 
       class Car {}
       struct Car {}
       
+**6. Function Defination**
 
+Functions are self-contained chunks of code that perform a specific task. You give a function a name that identifies what it does, and this name is used to “call” the function to perform its task when needed.
+
+- Please start `func` name with lowercased letter
+
+- If you want to name the `func` as task program
+
+      func fetchData()
+      func setUpView()
+      

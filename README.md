@@ -4,7 +4,7 @@
 
 **1. Variables Defination (`let` and `var`)**
 
-- Please name the variable as simple as possible and make it easy to understand. And please use `_`,`-`,`&`,`$` as **low** as possible.
+- Please name the variable and constant as simple as possible and make it easy to understand. And please use `_`,`-`,`&`,`$` as **low** as possible.
 
 - All the variables first word should start with lowercased. And the next further words can start with capitalized.
 
@@ -13,12 +13,19 @@
 - Dont use `_`**(underscore)** on start of the variable naming.
 
 
-2. Flag Defination
+**2. Flag Defination**
 
-      `Test`
+- Flags variable should start with `is`, `has` and verbs such as `needs`, `starts`.  
+
+      var isPresented: Bool?
+      var hasStarted: Bool?
+      var needsToReloadImmediately: Bool?
+      var startRequestImmediately: Bool?
+
+- Flags are also the main part of the business logic in development. So, make sure you name it **meaningful** to each appropriate task you want to control.
       
 
-3. Object Defination
+**3. Object Defination**
 
 - Please end with `Data` for object representation of your stored data object.
 
@@ -30,4 +37,26 @@ var teamData = TeamData()
 
 ```
 
-- Please end with 
+**4. Protocol Defination**
+
+A `protocol` defines a blueprint of methods, properties, and other requirements that suit a particular task or piece of functionality.
+
+- You can declare many protocols as you want in the .swift file. But make sure the functions and the properties that you declared inside the protocol is meaningful and associated with that `protocol`.
+
+- Start `protocol` name with uppercased letter.
+
+```
+      protocol ReusableView: class {
+            static var defaultReuseIdentifier: String { get }
+      }
+```
+
+**5. Class and Struct Defination**
+
+- `class` and `struct` name should be started with uppercased letter same as `protocol`.
+
+      class MyReusableDemoVC: UIViewController {}
+      class Car {}
+      struct Car {}
+      
+

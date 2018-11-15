@@ -9,7 +9,7 @@
 - All the variables first word should start with lowercased. And the next further words can start with capitalized.
 
 ```swift
-      var thisIsNewVariable = 123456
+   var thisIsNewVariable = 123456
 ```
 
 - Dont use `_`**(underscore)** on start of the variable naming.
@@ -20,10 +20,10 @@
 - Flags variable should start with `is`, `has` and verbs such as `needs`, `starts`.
 
 ```swift
-      var isPresented: Bool?
-      var hasStarted: Bool?
-      var needsToReloadImmediately: Bool?
-      var startRequestImmediately: Bool?
+   var isPresented: Bool?
+   var hasStarted: Bool?
+   var needsToReloadImmediately: Bool?
+   var startRequestImmediately: Bool?
 ```
 
 - Flags are also the main part of the business logic in development. So, make sure you name it **meaningful** to each appropriate task you want to control.
@@ -34,10 +34,10 @@
 - Please end with `Data` for object representation of your stored data object.
 
 ```swift
-      var newsData = NewsData()
-      var testData = VisitData()
-      var degreesData = DegreesData()
-      var teamData = TeamData()
+   var newsData = NewsData()
+   var testData = VisitData()
+   var degreesData = DegreesData()
+   var teamData = TeamData()
 ```
 
 **4. Protocol Defination**
@@ -49,9 +49,9 @@ A `protocol` defines a blueprint of methods, properties, and other requirements 
 - Start `protocol` name with uppercased letter.
       
 ```swift
-      protocol ReusableView: class {
-            static var defaultReuseIdentifier: String { get }
-      }
+   protocol ReusableView: class {
+       static var defaultReuseIdentifier: String { get }
+   }
 ```
 
 **5. Class and Struct Defination**
@@ -59,9 +59,9 @@ A `protocol` defines a blueprint of methods, properties, and other requirements 
 - `class` and `struct` name should be started with uppercased letter same as `protocol`.
       
 ```swift
-      class MyReusableDemoVC: UIViewController {}
-      class Car {}
-      struct Car {}
+   class MyReusableDemoVC: UIViewController {}
+   class Car {}
+   struct Car {}
 ```
       
 **6. Function Defination**
@@ -73,16 +73,16 @@ Functions are self-contained chunks of code that perform a specific task. You gi
 - If you want to name the `func` as task program, you can start the function name with **Verbs**
 
 ```swift
-      func fetchData()
-      func setUpView()
+   func fetchData()
+   func setUpView()
 ```
 
 - If you want to name the `func` as check program, you can start the function name with `is`, `did`
  
 ```swift
-      func isSubscribe()
-      func isFetchCompleted()
-      func isValidationSuccess()
+   func isSubscribe() -> Bool {}
+   func isFetchCompleted(completionHandler: @escaping (_data: Any) -> Void))
+   func isValidationSuccess() -> Bool {}
 ```
    
 
@@ -92,15 +92,15 @@ Functions are self-contained chunks of code that perform a specific task. You gi
 - If the `parameter` names that you declared are need to know for those who is going to access that function, don't use `_(underscore)` in front of that `parameter`. So, they will know at least which things to pass when they call that function.
 
 ```swift
-      func checkSubscription(_ hexStringGeneratedByApple: String,_ productName: String) // This is WRONG
-      func checkSubscription( hexStringGeneratedByApple: String, productName: String) // This is CORRECT
+   func checkSubscription(_ hexStringGeneratedByApple: String,_ productName: String) // This is WRONG
+   func checkSubscription( hexStringGeneratedByApple: String, productName: String) // This is CORRECT
 ```
 
 - If you are declaring the function which required a lots of parameters and going to use it everywhere, **DON'T CREATE `parameters`!**. Use object parameter instead of declaring single parameter.
 
 - Don't declare **Acccess Control** in front of the function name unless it was needed. **Access Controls** are required only when you want to control that function on the class which was extended on many class files. 
 
-      https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html
+   https://docs.swift.org/swift-book/LanguageGuide/AccessControl.html
       
 - 
 

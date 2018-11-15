@@ -93,7 +93,8 @@ Functions are self-contained chunks of code that perform a specific task. You gi
 
 ```swift
    func checkSubscription(_ hexStringGeneratedByApple: String,_ productName: String) // This is WRONG
-   func checkSubscription( hexStringGeneratedByApple: String, productName: String) // This is CORRECT
+
+   func checkSubscription(hexStringGeneratedByApple: String, productName: String) // This is CORRECT
 ```
 
 - If you are declaring the function which required a lots of parameters and going to use it everywhere, **DON'T CREATE `parameters`!**. Use object parameter instead of declaring single parameter.
